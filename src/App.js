@@ -201,8 +201,8 @@ function App() {
       description: "This page! Responsive website built with ReactJS. Also contains some cool features which can only be found using a mouse",
       imgSrc: PortfolioImage,
       technologies: ["HTML5", "CSS3", "JavaScript", "ReactJS"],
-      liveDemo: "add portfolio netlify",
-      sourceUrl: "https://github.com/hassanraja04"
+      liveDemo: "https://master--hassnraja.netlify.app",
+      sourceUrl: "https://github.com/hassanraja04/Portfolio"
     }
   ];
 
