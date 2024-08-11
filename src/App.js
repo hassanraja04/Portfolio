@@ -116,25 +116,27 @@ function App() {
 
   const handleMouseMove = useCallback((e) => {
     if (!trackRef.current.dataset.isDragging) return;
-
+  
     const clientX = getPointerPosition(e);
     const mouseDelta = clientX - parseFloat(trackRef.current.dataset.mouseDownAt);
     const percentageFactor = 5;
     let nextPercentageUnconstrained = parseFloat(trackRef.current.dataset.startScrollLeft) + (mouseDelta / (window.innerWidth / 2)) * -100 * percentageFactor;
-
+  
     const maxScrollRight = 100;
     const maxScrollLeft = -(trackRef.current.scrollWidth - trackRef.current.clientWidth);
     nextPercentageUnconstrained = Math.min(Math.max(nextPercentageUnconstrained, maxScrollLeft), maxScrollRight);
-
+  
     setTranslateX(nextPercentageUnconstrained);
-
+  
     const images = trackRef.current.getElementsByClassName('image');
     Array.from(images).forEach(image => {
       const maxImageTranslate = 150;
       const imageShiftPercentage = (nextPercentageUnconstrained / window.innerWidth) * maxImageTranslate;
       image.style.objectPosition = `calc(50% + ${imageShiftPercentage}%) center`;
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isExpanded]);
+  
 
   const handleMouseUp = useCallback((e) => {
     document.removeEventListener('mousemove', handleMouseMove);
@@ -231,7 +233,7 @@ function App() {
       AOS.refresh();
     }
   }, [isExpanded]);
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [currentYear] = useState(new Date().getFullYear());
 
   
   return (
