@@ -130,13 +130,13 @@ function App() {
   
     const images = trackRef.current.getElementsByClassName('image');
     Array.from(images).forEach(image => {
-      const maxImageTranslate = 150;
+      const maxImageTranslate = 100;
       const imageShiftPercentage = (nextPercentageUnconstrained / window.innerWidth) * maxImageTranslate;
       image.style.objectPosition = `calc(50% + ${imageShiftPercentage}%) center`;
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isExpanded]);
-  
+
 
   const handleMouseUp = useCallback((e) => {
     document.removeEventListener('mousemove', handleMouseMove);
@@ -280,11 +280,6 @@ function App() {
           ]
           </div>
 
-          <div class="command">&gt; Hassan.resume</div>
-          <div class="output">
-            <a href='/CV.pdf' target='_blank' rel='noopener noreferrer'>CV.pdf</a>
-          </div>
-
           <div class="command">&gt; Hassan.interests</div>
           <div class="output">["piano", "rugby", "gym"]</div>
 
@@ -292,7 +287,7 @@ function App() {
           <div class="output">"B.Sc. Computer Science - Queen Mary University of London"</div>
 
           <div class="command">&gt; Hassan.skills</div>
-          <div class="output">["Java", "JavaScript", "Python", "React", "HTML/CSS", "Linux", "swing", "git"]</div>
+          <div class="output">["Java", "JavaScript", "Python", "React", "HTML/CSS", "Linux", "Swing", "Git", "MongoDB", "Express", "Node.js"]</div>
 
           <div class="last-line">
             <span class="command">&gt; </span>
