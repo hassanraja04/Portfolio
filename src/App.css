@@ -293,7 +293,7 @@ a {
 }
 #outer-container {
   width: 100%;
-  position: relative; 
+  position: relative;
 }
 
 h2 {
@@ -506,7 +506,8 @@ h2:hover {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    overflow: hidden; 
   }
 
   #blur {
