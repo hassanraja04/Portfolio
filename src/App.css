@@ -218,6 +218,50 @@ a {
 }
 .different {
   color: #747fe0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.different::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  content: "";
+  background-color: #747fe0;
+  transition: transform .3s cubic-bezier(.215,.61,.355,1);
+  transform-origin: right center;
+  transform: scaleX(0);
+}
+
+.different:hover::after {
+  transform: scaleX(1); 
+  transform-origin: left center; 
+}
+
+.animation {
+  position: relative;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.animation::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  content: "";
+  background-color: #35feff;
+  transition: transform .3s cubic-bezier(.215,.61,.355,1);
+  transform-origin: right center;
+  transform: scaleX(0);
+}
+
+.animation:hover::after {
+  transform: scaleX(1); 
+  transform-origin: left center; 
 }
 
 .Projects {

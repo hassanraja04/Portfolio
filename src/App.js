@@ -191,9 +191,10 @@ function App() {
     },
     {
       title: "Youtube To MP3 Converter",
-      description: "Developed a Python script to convert video links into audio files, tailored specifically for personal use",
+      description: "Created a full-stack application to convert video links into audio files, tailored for personal use. It utilizes libraries like yt-dlp-exec and ytdl-core to process the links and extract high-quality MP3 audio files. Users can also customize the file name by editing the video title, which is then saved as the name of the MP3 file",
       imgSrc: YoutubeImage,
-      technologies: ["Python"],
+      technologies: ["HTML5", "CSS3", "JavaScript", "ReactJS", "Express", "NodeJS"],
+      liveDemo: "https://yt3-converter.vercel.app",
       sourceUrl: "https://github.com/hassanraja04/YouTube-To-mp3-converter"
     },
     {
@@ -381,13 +382,13 @@ function App() {
         </div>
         <div className='links'>
           <span className='email' data-aos="fade-up" data-aos-delay= "0">
-            <a href='mailto:hassanrajam123@gmail.com' rel='noreferrer'>Email</a>
+            <a className='animation' href='mailto:hassanrajam123@gmail.com' rel='noreferrer'>Email</a>
           </span>
           <span className='linkedin' data-aos="fade-up" data-aos-delay= "100">
-          <a href='https://www.linkedin.com/in/hassan-raja-24b503259' target='_blank' rel='noreferrer'>LinkedIn</a>
+          <a className='animation' href='https://www.linkedin.com/in/hassan-raja-24b503259' target='_blank' rel='noreferrer'>LinkedIn</a>
           </span>
           <span className='github' data-aos="fade-up" data-aos-delay= "200">
-          <a href='https://github.com/hassanraja04' target='_blank' rel='noreferrer'>GitHub</a>
+          <a className='animation' href='https://github.com/hassanraja04' target='_blank' rel='noreferrer'>GitHub</a>
           </span>
         </div>
       </div>
